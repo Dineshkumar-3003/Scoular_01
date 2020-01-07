@@ -9,7 +9,7 @@
    
      <test name="Test1">
     <classes>
-      <class name="tests.TC_001_Login_Valid1">
+      <class name="tests.TC_001_Login_Valid">
       </class>  
     </classes>
   </test> <!-- Test -->
