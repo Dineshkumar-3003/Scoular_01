@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="60073" started-at="2020-01-07T12:56:28Z" finished-at="2020-01-07T12:57:28Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="60073" started-at="2020-01-07T12:56:28Z" finished-at="2020-01-07T12:57:28Z">
+      <class name="tests.TC_001_Login_Valid1">
+        <test-method status="PASS" signature="classLevelSetup()[pri:0, instance:tests.TC_001_Login_Valid1@7a0ac6e3]" name="classLevelSetup" is-config="true" duration-ms="21" started-at="2020-01-07T12:56:28Z" finished-at="2020-01-07T12:56:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classLevelSetup -->
+        <test-method status="PASS" signature="methodLevelSetup()[pri:0, instance:tests.TC_001_Login_Valid1@7a0ac6e3]" name="methodLevelSetup" is-config="true" duration-ms="10714" started-at="2020-01-07T12:56:28Z" finished-at="2020-01-07T12:56:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodLevelSetup -->
+        <test-method status="PASS" signature="Invalid_Login_Test()[pri:0, instance:tests.TC_001_Login_Valid1@7a0ac6e3]" name="Invalid_Login_Test" duration-ms="4507" started-at="2020-01-07T12:56:38Z" description="Login Testcase 01" finished-at="2020-01-07T12:56:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Invalid_Login_Test -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:tests.TC_001_Login_Valid1@7a0ac6e3]" name="teardown" is-config="true" duration-ms="1160" started-at="2020-01-07T12:56:43Z" finished-at="2020-01-07T12:56:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Invalid_Login_Test status=SUCCESS method=TC_001_Login_Valid1.Invalid_Login_Test()[pri:0, instance:tests.TC_001_Login_Valid1@7a0ac6e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="methodLevelSetup()[pri:0, instance:tests.TC_001_Login_Valid1@7a0ac6e3]" name="methodLevelSetup" is-config="true" duration-ms="4540" started-at="2020-01-07T12:56:44Z" finished-at="2020-01-07T12:56:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodLevelSetup -->
+        <test-method status="PASS" signature="Valid_Login_Test()[pri:1, instance:tests.TC_001_Login_Valid1@7a0ac6e3]" name="Valid_Login_Test" duration-ms="37905" started-at="2020-01-07T12:56:49Z" description="Login Testcase 02" finished-at="2020-01-07T12:57:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Valid_Login_Test -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:tests.TC_001_Login_Valid1@7a0ac6e3]" name="teardown" is-config="true" duration-ms="1195" started-at="2020-01-07T12:57:26Z" finished-at="2020-01-07T12:57:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Valid_Login_Test status=SUCCESS method=TC_001_Login_Valid1.Valid_Login_Test()[pri:1, instance:tests.TC_001_Login_Valid1@7a0ac6e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tests.TC_001_Login_Valid1 -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
+</testng-results>
