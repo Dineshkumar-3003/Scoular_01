@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.TC_001_Login_Valid1" hash-for-method="Invalid_Login_Test">Invalid_Login_Test</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.TC_001_Login_Valid" hash-for-method="Invalid_Login_Test">Invalid_Login_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.TC_001_Login_Valid1" hash-for-method="Valid_Login_Test">Valid_Login_Test</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.TC_001_Login_Valid" hash-for-method="Invalid_Login_Test">Invalid_Login_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,10 +131,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.TC_001_Login_Valid1</span>
+              <img src="failed.png"/>
+              <span class="class-name">tests.TC_001_Login_Valid</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -133,21 +142,47 @@
                   <a name="Invalid_Login_Test">
                   </a> <!-- Invalid_Login_Test -->
                   <span class="method-name">Invalid_Login_Test</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Incorrect Username/Password] but found [Test]
+	at pages.Login.Verify_Error_Msg(Login.java:70)
+	at tests.TC_001_Login_Valid.Invalid_Login_Test(TC_001_Login_Valid.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(Login Testcase 01)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Valid_Login_Test">
-                  </a> <!-- Valid_Login_Test -->
-                  <span class="method-name">Valid_Login_Test</span>
-                  <em>
-(Login Testcase 02)                  </em>
+(Invalid Login Scenario)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.TC_001_Login_Valid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Invalid_Login_Test">
+                  </a> <!-- Invalid_Login_Test -->
+                  <span class="method-name">Invalid_Login_Test</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Incorrect Username/Password] but found [Test]
+	at pages.Login.Verify_Error_Msg(Login.java:70)
+	at tests.TC_001_Login_Valid.Invalid_Login_Test(TC_001_Login_Valid.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Invalid Login Scenario)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -163,8 +198,9 @@
     &lt;listener class-name=&quot;Listeners.AnnotationTransformer&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;2&quot; verbose=&quot;0&quot; name=&quot;Test1&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;Browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.TC_001_Login_Valid1&quot;/&gt;
+      &lt;class name=&quot;tests.TC_001_Login_Valid&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -206,18 +242,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Valid_Login_Test')
-data.setCell(0, 2, 'tests.TC_001_Login_Valid1')
-data.setCell(0, 3, 37905);
+data.setCell(0, 1, 'Invalid_Login_Test')
+data.setCell(0, 2, 'tests.TC_001_Login_Valid')
+data.setCell(0, 3, 9084);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Invalid_Login_Test')
-data.setCell(1, 2, 'tests.TC_001_Login_Valid1')
-data.setCell(1, 3, 4507);
+data.setCell(1, 2, 'tests.TC_001_Login_Valid')
+data.setCell(1, 3, 8233);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -243,34 +279,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.TC_001_Login_Valid1</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.TC_001_Login_Valid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">classLevelSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">methodLevelSetup</span>
-                <span class="method-start">31 ms</span>
+                <span class="method-name">methodLevelSetup(Chrome)</span>
+                <span class="method-start">27 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Invalid_Login_Test</span>
-                <span class="method-start">10745 ms</span>
+                <span class="method-start">17002 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=Invalid_Login_Test status=SUCCESS method=TC_001_Login_Valid1.Invalid_Login_Test()[p...)</span>
-                <span class="method-start">15254 ms</span>
+                <span class="method-name">teardown([TestResult name=Invalid_Login_Test status=SKIP method=TC_001_Login_Valid.Invalid_Login_Test()[pri:0...)</span>
+                <span class="method-start">27015 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">methodLevelSetup</span>
-                <span class="method-start">16421 ms</span>
+                <span class="method-name">methodLevelSetup(Chrome)</span>
+                <span class="method-start">28468 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Valid_Login_Test</span>
-                <span class="method-start">20961 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Invalid_Login_Test</span>
+                <span class="method-start">32859 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=Valid_Login_Test status=SUCCESS method=TC_001_Login_Valid1.Valid_Login_Test()[pri:1...)</span>
-                <span class="method-start">58866 ms</span>
+                <span class="method-name">teardown([TestResult name=Invalid_Login_Test status=FAILURE method=TC_001_Login_Valid.Invalid_Login_Test()[pr...)</span>
+                <span class="method-start">43342 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

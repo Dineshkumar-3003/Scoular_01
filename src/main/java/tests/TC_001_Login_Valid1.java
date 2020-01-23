@@ -26,7 +26,7 @@ public class TC_001_Login_Valid1 extends BaseTest {
 
 	}
 
-	@Test(priority = 1, description = "Login Testcase 02")
+	//@Test(priority = 1, description = "Login Testcase 02")
 	public void Valid_Login_Test() throws Exception {
 
 		String Test_Name = new Throwable().getStackTrace()[0].getMethodName();

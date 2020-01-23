@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class PO_Login {
 
-	public final static int Reset_Retry = 0;
 
 	public final static By usernameBy = By.id("UserName");
 	public final static By passwordBy = By.id("Password");
@@ -14,6 +13,15 @@ public class PO_Login {
 
 	public final static By Error_Msg = By.xpath("//*[@class = 'col-sm-12 text-center']//child::p");
 
+
+	
+	
+	
+	
+	
+	
+	
+	
 	// Page Factory
 
 	@FindBy(id = "UserName")

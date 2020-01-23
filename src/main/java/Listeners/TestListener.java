@@ -56,7 +56,7 @@ public class TestListener extends BaseTest implements ITestListener {
 				+ ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BASE64);
 
 		// ExtentReports log and screenshot operations for failed tests.
-		ExtentTestManager.getTest().log(LogStatus.FAIL, "Test Failed",
+		ExtentTestManager.getTest().log(LogStatus.FAIL, iTestResult.getThrowable().getMessage(),
 				ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
 	}
 
@@ -64,7 +64,7 @@ public class TestListener extends BaseTest implements ITestListener {
 	public void onTestSkipped(ITestResult iTestResult) {
 		System.out.println("I am in onTestSkipped method " + getTestMethodName(iTestResult) + " skipped");
 		// ExtentReports log operation for skipped tests.
-		ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Skipped");
+		ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Skipped", "");
 	}
 
 	// @Override

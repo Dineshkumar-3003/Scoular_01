@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite verbose="5" thread-count="2" name="Suite" parallel="tests" >
+
+<listeners>
+        <listener class-name="Listeners.TestListener"/>
+        <listener class-name="Listeners.AnnotationTransformer"/>
+    </listeners>  
+      <parameter name = "Browser" value="Chrome"/> 
+    <test name="com.FirstTest" parallel="methods" thread-count="5">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.TC_001_Login_Valid">
+                <methods>
+                    <include name="Invalid_Login_Test" />
+                    <include name="Valid_Login_Test" />
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- First Test -->
+    
+</suite> <!-- Suite -->

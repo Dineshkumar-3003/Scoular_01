@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite (0)]" parallel="tests">
+  <listeners>
+    <listener class-name="Listeners.TestListener"/>
+    <listener class-name="Listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="2" verbose="5" name="Test1(failed)" parallel="tests">
+    <classes>
+      <class name="tests.TC_001_Login_Valid1">
+        <methods>
+          <include name="methodLevelSetup"/>
+          <include name="classLevelSetup"/>
+          <include name="teardown"/>
+          <include name="Valid_Login_Test"/>
+        </methods>
+      </class> <!-- tests.TC_001_Login_Valid1 -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite (0)] -->
