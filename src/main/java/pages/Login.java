@@ -36,7 +36,6 @@ public class Login extends BasePage {
 
 		String sUsername = All_Data.get(1).get(0);
 		String sPassword = All_Data.get(1).get(1);
-
 		writeText(PO_Login.usernameBy, sUsername);
 		writeText(PO_Login.passwordBy, sPassword);
 		click(PO_Login.loginButtonBy);
